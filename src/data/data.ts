@@ -63,7 +63,7 @@ export const TableRowsData: RowType[] = [
       { ko: "자", cn: { title: "子", content: "陽木" } },
       { ko: "축", cn: { title: "丑", content: "陽水" } },
       { ko: "인", cn: { title: "寅", content: "陽火" } },
-      { ko: "묘", cn: { title: "卯", content: "陽木" } },
+      { ko: "묘", cn: { title: "卯", content: "陽金" } },
     ],
   },
   {

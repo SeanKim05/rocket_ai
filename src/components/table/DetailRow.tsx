@@ -1,5 +1,6 @@
 import React from "react";
 import type { DetailValue } from "@/data/data";
+import DetailCard from "./DetailCard";
 
 export default function DetailRow({
   label,
@@ -23,11 +24,7 @@ export default function DetailRow({
           key={i}
           className={`border-r-[0.5] p-1 ${isLast ? "border-b-1" : "border-b-[0.5]"}`}
         >
-          <div className="flex aspect-square flex-col items-center justify-center rounded-xl bg-[var(--color-cell-red)] py-1 text-white">
-            <span className="text-[8px]">({val.ko})</span>
-            <span className="font-han text-[24px]">{val.cn.title}</span>
-            <span className="font-han text-xs">{val.cn.content}</span>
-          </div>
+          <DetailCard val={val} />
         </td>
       ))}
     </tr>
