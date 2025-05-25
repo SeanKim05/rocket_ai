@@ -22,9 +22,8 @@ export default function SpeechBubble({
   tailPosition = "bottom",
   inViewId,
 }: SpeechBubbleProps) {
-  // zustand에서 inView 상태 받아오기
-  const inView = useInViewStore(
-    (state) => (inViewId ? state.inViewMap[inViewId] : undefined)
+  const inView = useInViewStore((state) =>
+    inViewId ? state.inViewMap[inViewId] : undefined,
   );
 
   React.useEffect(() => {
@@ -36,8 +35,12 @@ export default function SpeechBubble({
 
   return (
     <div
-      style={{ top: `${top}px`, left: `${left}px`, display: inViewId && !inView ? "none" : undefined }}
-      className={`absolute ${className} ${(inViewId && inView) ? "bubble-slide-in" : ""}`}
+      style={{
+        top: `${top}px`,
+        left: `${left}px`,
+        display: inViewId && !inView ? "none" : undefined,
+      }}
+      className={`absolute ${className} ${inViewId && inView ? "bubble-slide-in" : ""}`}
     >
       <div
         className={`text-seokbong-buble z-50 inline-block bg-[length:100%_100%] bg-no-repeat px-12 ${paddingClass} text-center whitespace-pre-line`}

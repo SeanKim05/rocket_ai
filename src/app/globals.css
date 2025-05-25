@@ -97,6 +97,21 @@
   }
 }
 
+.saju-slide-in {
+  animation: saju-slide-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes saju-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

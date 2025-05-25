@@ -50,7 +50,7 @@ export default function Home() {
             inViewId="motion-2"
           />
           <div className="relative top-[-50px] bottom-0 px-2 pt-6 pb-18">
-            <SajuTable />
+            <SajuTable inViewId="motion-2" />
           </div>
         </div>
       </MotionWrapper>
