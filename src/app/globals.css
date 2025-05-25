@@ -7,6 +7,7 @@
 }
 
 @theme {
+  /* 폰트 */
   --font-sans: "GapyeongHanseokbongR", sans-serif;
 
   --font-size-seokbong-r: 16px;
@@ -19,6 +20,10 @@
   --font-weight-b: 700;
 
   --tracking-seokbong-tight: -0.025em;
+
+  /* 색상 */
+  --color-cell-red: #c23030;
+  --color-cell-teal: #18868c;
 }
 
 @layer components {

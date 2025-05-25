@@ -1,14 +1,28 @@
-import Image from "next/image";
+import ImageFramer from "@/components/ImageFrame";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen">
-      <Image src="/images/saju_intro.png" alt="a" width="100" height="500" />
-      <p className="text-seokbong-r">기본 본문 텍스트</p>
+    <div className="w-screen max-w-112">
+      <ImageFramer
+        width={375}
+        height={652}
+        alt="인트로 이미지"
+        src="/images/saju_intro.png"
+      />
 
-      <p className="text-seokbong-b">한석봉 Regular</p>
+      <ImageFramer
+        width={375}
+        height={285}
+        src="/images/brush.png"
+        className="bg-red-50"
+      />
 
-      <p className="text-seokbong-buble">한석봉 Bold</p>
+      <ImageFramer
+        width={375}
+        height={306}
+        src="/images/saju_result.png"
+        className="bg-red-50"
+      />
     </div>
   );
 }
