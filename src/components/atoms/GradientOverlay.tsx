@@ -10,7 +10,7 @@ export default function GradientOverlay({
 }: GradientOverlayProps) {
   return (
     <div
-      className={`absolute left-0 top-0 w-full h-full pointer-events-none bg-fade-beige ${className}`}
+      className={`bg-fade-beige pointer-events-none absolute top-0 left-0 h-full w-full ${className}`}
     />
   );
 }

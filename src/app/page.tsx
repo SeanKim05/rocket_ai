@@ -5,7 +5,7 @@ import SpeechBubble from "@/components/SpeechBubble";
 
 export default function Home() {
   return (
-    <div className="w-screen max-w-112 bg-main-beige">
+    <div className="bg-main-beige w-screen max-w-112">
       <div className="relative">
         <ImageFramer
           width={375}
@@ -22,7 +22,7 @@ export default function Home() {
         />
       </div>
 
-      <MotionWrapper className="mt-30 mb-10 mr-6">
+      <MotionWrapper className="mt-30 mr-6 mb-10">
         <ImageFramer width={375} height={285} src="/images/brush.png" />
       </MotionWrapper>
 

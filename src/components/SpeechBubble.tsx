@@ -21,7 +21,7 @@ export default function SpeechBubble({
       className={`absolute ${className}`}
     >
       <div
-        className="inline-block bg-no-repeat bg-[length:100%_100%] px-12 pt-12 pb-16 whitespace-pre-line text-center text-seokbong-buble"
+        className="text-seokbong-buble inline-block bg-[length:100%_100%] bg-no-repeat px-12 pt-12 pb-16 text-center whitespace-pre-line"
         style={{
           backgroundImage: `url(${imageSrc})`,
           minWidth: "100px",
