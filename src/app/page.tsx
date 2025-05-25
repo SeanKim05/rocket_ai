@@ -1,8 +1,7 @@
 import ImageFramer from "@/components/ImageFrame";
 import GradientOverlay from "@/components/atoms/GradientOverlay";
 import MotionWrapper from "@/components/atoms/MotionWrapper";
-import SpeechBubbleTop from "@/components/SpeechBubbleTop";
-import SpeechBubbleBottom from "@/components/SpeechBubbleBttom";
+import SpeechBubble from "@/components/SpeechBubble";
 
 export default function Home() {
   return (
@@ -19,11 +18,12 @@ export default function Home() {
 
       <MotionWrapper className="relative mt-30 mr-6 mb-10">
         <ImageFramer width={375} height={285} src="/images/brush.png" />
-        <SpeechBubbleBottom
+        <SpeechBubble
           text={`이제 본격적으로 \nOO님의 사주팔자를 \n분석해볼 차례네요.`}
           imageSrc="/images/bubble_b.png"
           top={-200}
           left={6}
+          tailPosition="bottom"
         />
       </MotionWrapper>
 
@@ -35,11 +35,12 @@ export default function Home() {
             src="/images/saju_result.png"
             className="relative"
           />
-          <SpeechBubbleTop
+          <SpeechBubble
             text={`제가 oo님의 사주를 \n보기 쉽게 표로 정리했어요`}
             imageSrc="/images/bubble_t.png"
             top={-108}
             left={6}
+            tailPosition="top"
           />
         </div>
       </MotionWrapper>
