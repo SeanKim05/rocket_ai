@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
 .bg-fade-beige {
-  background: linear-gradient(180deg, rgba(243, 242, 239, 0) 85%, #F3F2EF 100%);
+  background: linear-gradient(180deg, rgba(243, 242, 239, 0) 85%, #f3f2ef 100%);
 }
-
 
 @font-face {
   font-family: "GapyeongHanseokbongR";
@@ -58,5 +57,19 @@
     font-weight: var(--font-weight-r);
     line-height: var(--line-height-seokbong-150);
     letter-spacing: var(--tracking-seokbong-tight);
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

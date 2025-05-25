@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-
 interface ImageProps {
   src: string;
   alt?: string;
@@ -9,7 +8,6 @@ interface ImageProps {
   height: number;
   className?: string;
   priority?: boolean;
-
 }
 
 export default function ImageFramer({
@@ -19,7 +17,6 @@ export default function ImageFramer({
   height,
   className = "",
   priority = false,
-
 }: ImageProps) {
   return (
     <div
@@ -34,7 +31,6 @@ export default function ImageFramer({
         className="object-cover"
         priority={priority}
       />
-
     </div>
   );
 }

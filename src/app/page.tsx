@@ -1,5 +1,6 @@
 import ImageFramer from "@/components/ImageFrame";
-import GradientOverlay from "@/components/GradientOverlay";
+import GradientOverlay from "@/components/atoms/GradientOverlay";
+import MotionWrapper from "@/components/atoms/MotionWrapper";
 
 export default function Home() {
   return (
@@ -14,16 +15,13 @@ export default function Home() {
         <GradientOverlay />
       </div>
 
-      <ImageFramer
-        width={375}
-        height={285}
-        src="/images/brush.png"
-        className="mt-30 mb-10 mr-6"
-      />
+      <MotionWrapper className="mt-30 mb-10 mr-6">
+        <ImageFramer width={375} height={285} src="/images/brush.png" />
+      </MotionWrapper>
 
-      <ImageFramer width={375} height={306} src="/images/saju_result.png" />
+      <MotionWrapper>
+        <ImageFramer width={375} height={306} src="/images/saju_result.png" />
+      </MotionWrapper>
     </div>
   );
 }
-
-// 448
