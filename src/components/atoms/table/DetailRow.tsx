@@ -1,6 +1,6 @@
 import React from "react";
 import type { DetailValue } from "@/data/data";
-import DetailCard from "./DetailCard";
+import DetailCard from "@/components/atoms/table/DetailCard";
 
 export default function DetailRow({
   label,

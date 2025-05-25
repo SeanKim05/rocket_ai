@@ -1,6 +1,6 @@
-import DefaultRow from "./DefaultRow";
-import DetailRow from "./DetailRow";
-import MultiRow from "./MultiRow";
+import DefaultRow from "../../atoms/table/DefaultRow";
+import DetailRow from "../../atoms/table/DetailRow";
+import MultiRow from "../../atoms/table/MultiRow";
 import type { RowType } from "@/data/data";
 
 interface TableRowsProps {

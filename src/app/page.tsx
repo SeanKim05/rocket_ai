@@ -1,8 +1,9 @@
-import ImageFramer from "@/components/ImageFrame";
-import GradientOverlay from "@/components/GradientOverlay";
-import MotionWrapper from "@/components/MotionWrapper";
-import SpeechBubble from "@/components/SpeechBubble";
+import ImageFramer from "@/components/atoms/slides/ImageFrame";
+import GradientOverlay from "@/components/atoms/slides/GradientOverlay";
+import MotionWrapper from "@/components/atoms/slides/MotionWrapper";
+import SpeechBubble from "@/components/atoms/slides/SpeechBubble";
 import SajuTable from "@/components/SajuTable";
+import ImageSlide from "@/components/molcules/slides/ImageSlide";
 
 export default function Home() {
   return (
@@ -18,12 +19,12 @@ export default function Home() {
       </div>
 
       <MotionWrapper className="relative mt-30 mr-6 mb-10">
-        <ImageFramer width={375} height={285} src="/images/brush.png" />
-        <SpeechBubble
-          text={`이제 본격적으로 \nOO님의 사주팔자를 \n분석해볼 차례네요.`}
-          imageSrc="/images/bubble_b.png"
-          top={-200}
-          left={6}
+        <ImageSlide
+          resultImgSrc="/images/brush.png"
+          bubbleText={`이제 본격적으로 \nOO님의 사주팔자를 \n분석해볼 차례네요.`}
+          bubbleImgSrc="/images/bubble_b.png"
+          bubbleTop={-200}
+          bubbleLeft={6}
           tailPosition="bottom"
         />
       </MotionWrapper>

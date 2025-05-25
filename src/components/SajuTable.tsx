@@ -1,7 +1,7 @@
 import { headersData, TableRowsData } from "@/data/data";
-import Header from "./table/Header";
-import TableRows from "./table/TableRows";
-import TableTitle from "./table/TableTitle";
+import Header from "./atoms/table/Header";
+import TableRows from "./molcules/table/TableRows";
+import TableTitle from "./molcules/table/TableTitle";
 
 export default function SajuTable() {
   return (

@@ -7,7 +7,6 @@ interface ImageProps {
   width: number;
   height: number;
   className?: string;
-  priority?: boolean;
 }
 
 export default function ImageFramer({
@@ -16,7 +15,6 @@ export default function ImageFramer({
   width,
   height,
   className = "",
-  priority = false,
 }: ImageProps) {
   return (
     <div
@@ -29,7 +27,7 @@ export default function ImageFramer({
         fill
         sizes="100vw"
         className="object-cover"
-        priority={priority}
+        priority={true}
       />
     </div>
   );
