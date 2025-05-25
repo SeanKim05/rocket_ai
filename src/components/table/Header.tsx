@@ -4,13 +4,13 @@ interface HeaderProps {
 
 export default function Header({ headers }: HeaderProps) {
   return (
-    <thead>
+    <thead className="border-r-1 border-b-1">
       <tr>
-        <th className="border-[0.5px] border-black px-4 py-2">구분</th>
-        {headers.map((header) => (
+        <th className="px-4 py-2">구분</th>
+        {headers.map((header, idx) => (
           <th
             key={header}
-            className="font-han border-[0.5px] border-black px-4 py-2"
+            className={`font-han border-r-[0.5] py-2 ${idx === 0 && "border-l-1"}`}
           >
             {header}
           </th>
