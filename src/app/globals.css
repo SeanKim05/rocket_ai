@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "GapyeongHanseokbongR";
+  display: swap;
+  src: url("/fonts/GapyeongHanseokbongR.ttf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-sans: "GapyeongHanseokbongR", sans-serif;
+
+  --font-size-seokbong-r: 16px;
+  --font-size-seokbong-b: 20px;
+
+  --line-height-seokbong-100: 1;
+  --line-height-seokbong-150: 1.5;
+
+  --font-weight-r: 400;
+  --font-weight-b: 700;
+
+  --tracking-seokbong-tight: -0.025em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  /* 일반 본문용 텍스트 (16px, 100%) */
+  .text-seokbong-r {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-seokbong-r);
+    font-weight: var(--font-weight-r);
+    line-height: var(--line-height-seokbong-100);
+    letter-spacing: 0;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* 강조 텍스트 (20px, 100%) */
+  .text-seokbong-b {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-seokbong-b);
+    font-weight: var(--font-weight-b);
+    line-height: var(--line-height-seokbong-100);
+    letter-spacing: 0;
+  }
+
+  /* 말풍선/설명 텍스트 (16px, 150%, -2.5%) */
+  .text-seokbong-buble {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-seokbong-r);
+    font-weight: var(--font-weight-r);
+    line-height: var(--line-height-seokbong-150);
+    letter-spacing: var(--tracking-seokbong-tight);
+  }
 }

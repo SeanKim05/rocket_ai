@@ -1,7 +1,16 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div className="text-red-500 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1>Home</h1>
+    <div className="w-screen h-screen">
+      <Image src="/images/saju_intro.png" alt="a" width="100" height="500" />
+      <p className="text-seokbong-r">기본 본문 텍스트</p>
+
+      <p className="text-seokbong-b">한석봉 Regular</p>
+
+      <p className="text-seokbong-buble">한석봉 Bold</p>
     </div>
   );
 }
+
+// 448
