@@ -1,7 +1,8 @@
 import ImageFramer from "@/components/ImageFrame";
-import GradientOverlay from "@/components/atoms/GradientOverlay";
-import MotionWrapper from "@/components/atoms/MotionWrapper";
+import GradientOverlay from "@/components/GradientOverlay";
+import MotionWrapper from "@/components/MotionWrapper";
 import SpeechBubble from "@/components/SpeechBubble";
+import SajuTable from "@/components/SajuTable";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
             left={6}
             tailPosition="top"
           />
+          <SajuTable />
         </div>
       </MotionWrapper>
     </div>

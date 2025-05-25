@@ -10,10 +10,18 @@
   src: url("/fonts/GapyeongHanseokbongR.ttf");
 }
 
+@font-face {
+  font-family: "ZenAntique-Regular";
+  display: swap;
+  src: url("/fonts/ZenAntique-Regular.ttf");
+}
+
 @theme {
   /* 폰트 */
   --font-sans: "GapyeongHanseokbongR", sans-serif;
+  --font-han: "ZenAntique-Regular", sans-serif;
 
+  --font-size-seokbong-xs: 8px;
   --font-size-seokbong-r: 16px;
   --font-size-seokbong-b: 20px;
 
@@ -32,6 +40,14 @@
 }
 
 @layer components {
+  .text-seokbong-xs {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-seokbong-xs);
+    font-weight: var(--font-weight-r);
+    line-height: var(--line-height-seokbong-100);
+    letter-spacing: 0;
+  }
+
   /* 일반 본문용 텍스트 (16px, 100%) */
   .text-seokbong-r {
     font-family: var(--font-sans);
