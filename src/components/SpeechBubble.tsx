@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 
 interface SpeechBubbleProps {
   text: string;
-  imageSrc: string; // Bubble image source
+  imageSrc: string;
   className?: string;
   top: number;
   left: number;
@@ -21,20 +20,15 @@ export default function SpeechBubble({
       style={{ top: `${top}px`, left: `${left}px` }}
       className={`absolute ${className}`}
     >
-      <div className="relative w-[220px] h-[110px] flex items-center justify-center">
-        <Image
-          src={imageSrc}
-          alt="Speech Bubble"
-          fill
-          style={{ objectFit: "contain" }}
-          priority
-        />
-        <span
-          className="absolute left-0 top-0 w-full h-full flex items-center justify-center px-6 py-4 text-black text-center text-balance text-ellipsis overflow-hidden whitespace-pre-line text-base leading-snug"
-          style={{ pointerEvents: "none" }}
-        >
-          {text}
-        </span>
+      <div
+        className="inline-block bg-no-repeat bg-[length:100%_100%] px-12 pt-12 pb-16 whitespace-pre-line text-center text-seokbong-buble"
+        style={{
+          backgroundImage: `url(${imageSrc})`,
+          minWidth: "100px",
+          minHeight: "80px",
+        }}
+      >
+        {text}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import ImageFramer from "@/components/ImageFrame";
 import GradientOverlay from "@/components/atoms/GradientOverlay";
 import MotionWrapper from "@/components/atoms/MotionWrapper";
+import SpeechBubble from "@/components/SpeechBubble";
 
 export default function Home() {
   return (
@@ -13,6 +14,12 @@ export default function Home() {
           src="/images/saju_intro.png"
         />
         <GradientOverlay />
+        <SpeechBubble
+          text={`제가 oo님의 사주를 \n보기 쉽게 표로 정리했어요`}
+          imageSrc="/images/bubble_t.png"
+          top={600}
+          left={100}
+        />
       </div>
 
       <MotionWrapper className="mt-30 mb-10 mr-6">
