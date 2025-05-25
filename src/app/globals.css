@@ -37,6 +37,7 @@
   --color-cell-red: #c23030;
   --color-cell-teal: #18868c;
   --color-main-beige: #f3f2ef;
+  --color-line-gray: #2b557e;
 }
 
 @layer components {

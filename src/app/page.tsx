@@ -46,7 +46,9 @@ export default function Home() {
             tailPosition="top"
             inViewId="motion-2"
           />
-          <SajuTable />
+          <div className="px-2 pt-6 pb-20">
+            <SajuTable />
+          </div>
         </div>
       </MotionWrapper>
     </div>
