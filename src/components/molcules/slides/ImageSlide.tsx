@@ -12,6 +12,7 @@ interface ResultBubbleProps {
   imgWidth?: number;
   imgHeight?: number;
   imgClassName?: string;
+  inViewId?: string;
 }
 
 export default function ImageSlide({
@@ -24,6 +25,7 @@ export default function ImageSlide({
   imgWidth = 375,
   imgHeight = 306,
   imgClassName = "relative",
+  inViewId,
 }: ResultBubbleProps) {
   return (
     <>
@@ -39,6 +41,7 @@ export default function ImageSlide({
         top={bubbleTop}
         left={bubbleLeft}
         tailPosition={tailPosition}
+        inViewId={inViewId}
       />
     </>
   );

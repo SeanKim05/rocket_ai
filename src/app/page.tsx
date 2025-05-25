@@ -18,7 +18,7 @@ export default function Home() {
         <GradientOverlay />
       </div>
 
-      <MotionWrapper className="relative mt-30 mr-6 mb-10">
+      <MotionWrapper id="motion-1" className="relative mt-30 mr-6 mb-10">
         <ImageSlide
           resultImgSrc="/images/brush.png"
           bubbleText={`이제 본격적으로 \nOO님의 사주팔자를 \n분석해볼 차례네요.`}
@@ -26,10 +26,11 @@ export default function Home() {
           bubbleTop={-200}
           bubbleLeft={6}
           tailPosition="bottom"
+          inViewId="motion-1"
         />
       </MotionWrapper>
 
-      <MotionWrapper>
+      <MotionWrapper id="motion-2">
         <div className="relative">
           <ImageFramer
             width={375}
@@ -43,6 +44,7 @@ export default function Home() {
             top={-108}
             left={6}
             tailPosition="top"
+            inViewId="motion-2"
           />
           <SajuTable />
         </div>
