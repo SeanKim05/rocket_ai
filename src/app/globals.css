@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+.bg-fade-beige {
+  background: linear-gradient(180deg, rgba(243, 242, 239, 0) 85%, #F3F2EF 100%);
+}
+
+
 @font-face {
   font-family: "GapyeongHanseokbongR";
   display: swap;
@@ -24,6 +29,7 @@
   /* 색상 */
   --color-cell-red: #c23030;
   --color-cell-teal: #18868c;
+  --color-main-beige: #f3f2ef;
 }
 
 @layer components {

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import React from "react";
+
 
 interface ImageProps {
   src: string;
@@ -7,6 +9,7 @@ interface ImageProps {
   height: number;
   className?: string;
   priority?: boolean;
+
 }
 
 export default function ImageFramer({
@@ -16,10 +19,11 @@ export default function ImageFramer({
   height,
   className = "",
   priority = false,
+
 }: ImageProps) {
   return (
     <div
-      className={`w-full relative ${className}`}
+      className={`relative ${className}`}
       style={{ aspectRatio: `${width} / ${height}` }}
     >
       <Image
@@ -30,6 +34,7 @@ export default function ImageFramer({
         className="object-cover"
         priority={priority}
       />
+
     </div>
   );
 }
