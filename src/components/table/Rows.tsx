@@ -1,22 +1,14 @@
 import React from "react";
 
-interface NormalValue {
-  cn: string;
-  ko: string;
-}
-
-interface NestedValue {
-  id: number;
-  content: NormalValue[];
-}
-
-interface Row {
-  label: { cn: string; ko: string };
-  values: (NormalValue | NestedValue)[];
-}
+import type {
+  NormalValue,
+  DetailValue,
+  MultiValue,
+  RowType,
+} from "@/data/data";
 
 interface RowsProps {
-  rows: Row[];
+  rows: RowType[];
 }
 
 const DefaultRow = (val: NormalValue, i: number) => (
@@ -28,7 +20,17 @@ const DefaultRow = (val: NormalValue, i: number) => (
   </td>
 );
 
-const NestedRow = (val: NestedValue, i: number) => (
+const DetailRow = (val: DetailValue, i: number) => (
+  <td key={i} className="border-[0.5px] border-black px-4 py-2">
+    <div className="flex flex-col items-center">
+      <span className="text-[8px]">({val.ko})</span>
+      <span className="font-han text-[24px]">{val.cn.title}</span>
+      <span className="font-han text-xs">{val.cn.content}</span>
+    </div>
+  </td>
+);
+
+const MultiRow = (val: MultiValue, i: number) => (
   <td key={i} className="border-[0.5px] border-black px-4 py-2">
     <div className="flex flex-col items-center">
       {val.content.map((item, idx) => (
@@ -52,13 +54,12 @@ export default function Rows({ rows }: RowsProps) {
               <span className="text-[8px]">({row.label.ko})</span>
             </div>
           </td>
-          {row.values.map((val, i) => {
-            if ("content" in val) {
-              return NestedRow(val, i);
-            } else {
-              return DefaultRow(val, i);
-            }
-          })}
+
+          {row.type === "default" &&
+            row.values.map((val, i) => DefaultRow(val, i))}
+          {row.type === "detail" &&
+            row.values.map((val, i) => DetailRow(val, i))}
+          {row.type === "multi" && row.values.map((val, i) => MultiRow(val, i))}
         </tr>
       ))}
     </tbody>

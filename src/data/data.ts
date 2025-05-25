@@ -1,6 +1,41 @@
-export const headersData = ["時", "日", "年", "月"];
+export interface NormalValue {
+  ko: string;
+  cn: string;
+}
 
-export const rowsData = [
+export interface DetailValue {
+  ko: string;
+  cn: {
+    title: string;
+    content: string;
+  };
+}
+
+export interface MultiValue {
+  id: number;
+  content: Array<NormalValue>;
+}
+
+export type RowType =
+  | {
+      type: "default";
+      label: { cn: string; ko: string };
+      values: NormalValue[];
+    }
+  | {
+      type: "detail";
+      label: { cn: string; ko: string };
+      values: DetailValue[];
+    }
+  | {
+      type: "multi";
+      label: { cn: string; ko: string };
+      values: MultiValue[];
+    };
+
+export const headersData: string[] = ["時", "日", "年", "月"];
+
+export const rowsData: RowType[] = [
   {
     type: "default",
     label: { cn: "十星", ko: "십성" },
@@ -15,20 +50,20 @@ export const rowsData = [
     type: "detail",
     label: { cn: "天干", ko: "천간" },
     values: [
-      { ko: "갑", cn: { title: "甲", content: "甲甲" } },
-      { ko: "을", cn: { title: "乙", content: "乙乙" } },
-      { ko: "병", cn: { title: "丙", content: "丙丙" } },
-      { ko: "정", cn: { title: "丁", content: "丁丁" } },
+      { ko: "갑", cn: { title: "甲", content: "陰火" } },
+      { ko: "을", cn: { title: "乙", content: "陽水" } },
+      { ko: "병", cn: { title: "丙", content: "陽火" } },
+      { ko: "정", cn: { title: "丁", content: "陽金" } },
     ],
   },
   {
     type: "detail",
     label: { cn: "지支", ko: "지지" },
     values: [
-      { ko: "자", cn: { title: "子", content: "子子" } },
-      { ko: "축", cn: { title: "丑", content: "丑丑" } },
-      { ko: "인", cn: { title: "寅", content: "寅寅" } },
-      { ko: "묘", cn: { title: "卯", content: "卯卯" } },
+      { ko: "자", cn: { title: "子", content: "陽木" } },
+      { ko: "축", cn: { title: "丑", content: "陽水" } },
+      { ko: "인", cn: { title: "寅", content: "陽火" } },
+      { ko: "묘", cn: { title: "卯", content: "陽木" } },
     ],
   },
   {
