@@ -35,7 +35,7 @@ export type RowType =
 
 export const headersData: string[] = ["時", "日", "年", "月"];
 
-export const rowsData: RowType[] = [
+export const TableRowsData: RowType[] = [
   {
     type: "default",
     label: { cn: "十星", ko: "십성" },

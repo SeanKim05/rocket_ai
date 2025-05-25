@@ -1,6 +1,6 @@
-import { headersData, rowsData } from "@/data/data";
+import { headersData, TableRowsData } from "@/data/data";
 import Header from "./table/Header";
-import Rows from "./table/Rows";
+import TableRows from "./table/TableRows";
 import TableTitle from "./table/TableTitle";
 
 export default function SajuTable() {
@@ -9,7 +9,7 @@ export default function SajuTable() {
       <TableTitle />
       <table className="w-full border-collapse text-center">
         <Header headers={headersData} />
-        <Rows rows={rowsData} />
+        <TableRows TableRows={TableRowsData} />
       </table>
     </div>
   );
