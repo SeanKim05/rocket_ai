@@ -6,7 +6,10 @@ import Line from "./atoms/Line";
 
 export default function SajuTable() {
   return (
-    <div className="relative flex flex-col items-center justify-center border-2">
+    <div
+      className="relative flex flex-col items-center justify-center border-2"
+      style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
+    >
       <Line direction="horizontal" top={4} />
       <Line direction="vertical" left={4} />
       <Line direction="vertical" right={4} />

@@ -30,14 +30,17 @@ export default function Home() {
         />
       </MotionWrapper>
 
-      <MotionWrapper id="motion-2">
+      <MotionWrapper id="motion-2" threshold={0.1}>
         <div className="relative">
-          <ImageFramer
-            width={375}
-            height={306}
-            src="/images/saju_result.png"
-            className="relative"
-          />
+          <div className="relative">
+            <ImageFramer
+              width={375}
+              height={306}
+              src="/images/saju_result.png"
+              // className="relative"
+            />
+            <GradientOverlay />
+          </div>
           <SpeechBubble
             text={`제가 oo님의 사주를 \n보기 쉽게 표로 정리했어요`}
             imageSrc="/images/bubble_t.png"
@@ -46,7 +49,7 @@ export default function Home() {
             tailPosition="top"
             inViewId="motion-2"
           />
-          <div className="px-2 pt-6 pb-20">
+          <div className="relative top-[-50px] bottom-0 px-2 pt-6 pb-18">
             <SajuTable />
           </div>
         </div>
