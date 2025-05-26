@@ -13,16 +13,16 @@ export default function DetailRow({
 }) {
   return (
     <tr>
-      <td className={`border-r-1 ${isLast ? "border-b-1" : "border-b-[0.5]"}`}>
+      <td className={`border-r ${isLast ? "border-b" : "border-b-[0.5px]"}`}>
         <div className="flex flex-col items-center">
-          <span className="font-han text-xs">{label.cn}</span>
-          <span className="text-[8px]">({label.ko})</span>
+          <span className="font-han text-[0.7rem] sm:text-xs">{label.cn}</span>
+          <span className="text-[0.45rem] sm:text-[0.6rem]">({label.ko})</span>
         </div>
       </td>
       {values.map((val, i) => (
         <td
           key={i}
-          className={`border-r-[0.5] p-1 ${isLast ? "border-b-1" : "border-b-[0.5]"}`}
+          className={`border-r p-0.5 sm:p-1 ${isLast ? "border-b" : "border-b-[0.5px]"}`}
         >
           <DetailCard val={val} />
         </td>

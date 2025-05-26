@@ -17,15 +17,15 @@ export default function MultiRow({
         </div>
       </td>
       {values.map((val, i) => (
-        <td key={i} className="border-r-[0.5] border-b-1 px-4 py-2">
+        <td key={i} className="border-r border-b px-1 sm:px-2 py-1">
           <div className="flex flex-col items-center">
             {val.content.map((item, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center justify-center"
               >
-                <span className="font-han text-xs">{item.cn}</span>
-                <span className="text-[8px]">({item.ko})</span>
+                <span className="font-han text-[0.7rem] sm:text-xs">{item.cn}</span>
+                <span className="text-[0.45rem] sm:text-[0.6rem]">({item.ko})</span>
               </div>
             ))}
           </div>
