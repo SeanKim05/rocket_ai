@@ -2,7 +2,9 @@
 
 **배포 링크:** [https://rocket-ai-b5ij.vercel.app/](https://rocket-ai-b5ij.vercel.app/)
 
-## 사용한 기술스택 및 이유
+## ⚠️ 스크롤 애니매이션이 적용되어 있으니 반드시 스크롤하여 페이지를 확인해주세요!
+
+## 🛠️ 사용한 기술스택 및 이유
 
 - **Next.js (React 기반)**: 빠른 개발, SSR/CSR 지원, 파일 기반 라우팅, SEO, 타입 안정성(typescript)
 - **TypeScript**: 타입 안정성, 유지보수성, 대규모 프로젝트에 적합
@@ -10,7 +12,7 @@
 - **Zustand**: 전역 상태 관리, 간단한 API, React와의 높은 호환성
 - **Atomic Design Pattern**: 컴포넌트 재사용성, 유지보수성, UI 일관성 강화
 
-## 폴더구조
+## 📁 폴더구조
 
 ```
 rocket/
