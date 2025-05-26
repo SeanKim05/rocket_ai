@@ -1,4 +1,6 @@
-# rocket AI 과제전형
+# rocket AI 🚀 과제전형
+
+**배포 링크:** [https://rocket-ai-b5ij.vercel.app/](https://rocket-ai-b5ij.vercel.app/)
 
 ## 사용한 기술스택 및 이유
 
