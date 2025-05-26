@@ -10,7 +10,7 @@ interface SpeechBubbleProps {
   top?: number;
   left?: number;
   tailPosition?: "top" | "bottom";
-  inViewId?: string; // MotionWrapper의 id와 연결
+  inViewId?: string;
 }
 
 export default function SpeechBubble({

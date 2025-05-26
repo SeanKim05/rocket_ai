@@ -24,17 +24,11 @@ export default function ImageSlide({
   tailPosition = "top",
   imgWidth = 375,
   imgHeight = 306,
-  imgClassName = "relative",
   inViewId,
 }: ResultBubbleProps) {
   return (
     <>
-      <ImageFramer
-        width={imgWidth}
-        height={imgHeight}
-        src={resultImgSrc}
-        className={imgClassName}
-      />
+      <ImageFramer width={imgWidth} height={imgHeight} src={resultImgSrc} />
       <SpeechBubble
         text={bubbleText}
         imageSrc={bubbleImgSrc}

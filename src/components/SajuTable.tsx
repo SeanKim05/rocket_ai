@@ -3,7 +3,7 @@ import { headersData, TableRowsData } from "@/data/data";
 import Header from "./atoms/table/Header";
 import TableRows from "./molcules/table/TableRows";
 import TableTitle from "./molcules/table/TableTitle";
-import Line from "./atoms/Line";
+import Line from "./atoms/table/Line";
 
 import { useInViewStore } from "../utils/inViewStore";
 
@@ -12,13 +12,14 @@ interface SajuTableProps {
 }
 
 export default function SajuTable({ inViewId }: SajuTableProps) {
-  const inView = useInViewStore((state: { inViewMap: Record<string, boolean> }) =>
-    inViewId ? state.inViewMap[inViewId] : true,
+  const inView = useInViewStore(
+    (state: { inViewMap: Record<string, boolean> }) =>
+      inViewId ? state.inViewMap[inViewId] : true,
   );
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center border-2 ${inViewId && inView ? "saju-slide-in" : ""}`}
+      className={`relative flex flex-col items-center justify-center border-2 ${inViewId && inView && "saju-slide-in"}`}
       style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
     >
       <Line direction="horizontal" top={4} />
