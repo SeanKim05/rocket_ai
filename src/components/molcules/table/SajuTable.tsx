@@ -1,11 +1,11 @@
 "use client";
 import { headersData, TableRowsData } from "@/data/data";
-import Header from "./atoms/table/Header";
-import TableRows from "./molcules/table/TableRows";
-import TableTitle from "./molcules/table/TableTitle";
-import Line from "./atoms/table/Line";
+import Header from "../../atoms/table/Header";
+import TableRows from "./TableRows";
+import TableTitle from "../../atoms/table/TableTitle";
+import Line from "../../atoms/table/Line";
 
-import { useInViewStore } from "../utils/inViewStore";
+import { useInViewStore } from "../../../utils/inViewStore";
 
 interface SajuTableProps {
   inViewId?: string;
